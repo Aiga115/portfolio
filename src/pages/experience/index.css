@@ -1,0 +1,100 @@
+.container{
+    display: flex;
+    align-items: "center";
+    justify-content: "center";
+    width:100%;
+}
+.experience_timeline{
+    width: "80%";
+    height:"auto";
+    max-width: "800px";
+    margin: "0 auto";
+    position:"relative"
+}
+.experience_timeline ul{
+    list-style: none;
+
+}
+.experience_timeline ul li{
+    background-color: #9896f1;
+    color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.experience_timeline ul li:last-child{
+    margin-bottom: 0;
+}
+.item h1{
+    font-size: "23px";
+    font-family: "Source Sans Pro";
+    line-height: 30px;
+    color: #455d7a;
+    font-weight: bolder;
+}
+.item p {
+    font-size: 16px;
+    font-family: "PT Mono";
+}
+.date{
+    font-size: 13px;
+    font-family: "PT Mono";
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #233142;
+}
+.experience_timeline ul li h1{
+    margin-bottom: 15px;
+}
+@media only screen and (min-width:768px) {
+    .experience_timeline:before{
+        content: "";
+        width: 2px;
+        height: 100%;
+        background-color: gray;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .experience_timeline ul li{
+        width: 50%;
+        margin-bottom: 50px;
+        position : relative;
+    }
+    .experience_timeline ul li:nth-child(odd){
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+        border-radius: 20px 0px 20px 20px;
+    }
+    .experience_timeline ul li:nth-child(even){
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0px 20px 20px 20px;
+    }
+    .experience_timeline ul li:after{
+        content: "";
+        width:20px;
+        height: 20px;
+        background-color: gray;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+    }
+    .experience_timeline ul li:nth-child(odd)::after{
+        transform: translate(50%,-50%);
+        right:-30px;
+    }
+    .experience_timeline ul li:nth-child(even)::after{
+        transform: translate(-50%,-50%);
+        left: -30px;
+    }
+    .experience_timeline ul li:hover:after{
+        background-color: aquamarine;
+    }
+    .date{
+        position: absolute;
+        top: -30px;
+        color:#233142;
+    }
+}
